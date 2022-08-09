@@ -49,7 +49,6 @@ nav button {
 
 /*header*/
 header {
-  background-color: magenta;
   grid-column: 1/-1;
   display: flex;
   justify-content: space-around;
@@ -57,18 +56,17 @@ header {
 }
 
 header div {
-  width: 40%;
-  background-color: orange;
+  width: 45%;
+  margin: 24px;
 }
 
 header p {
-  background-color: purple;
+  margin: 12px;
 }
 
 header img {
-  width: 60%;
+  width: 55%;
   border-radius: 16px;
-  background-color: blue;
 }
 
 .banner-img {
@@ -78,7 +76,6 @@ header img {
 
 /*main*/
 main {
-  background-color: green;
   grid-column: 1/-1;
   padding: 80px 0;
 }
@@ -103,6 +100,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-shadow: 5px 5px 20px grey;
 }
 
 .explore {
@@ -153,4 +151,12 @@ footer {
   font-weight: 700;
   padding-left: 24px;
   grid-column: 1/-1;
+}
+
+
+/*tablet size*/
+@media(max-width:768px) {
+  header {
+    flex-direction: column;
+  }
 }

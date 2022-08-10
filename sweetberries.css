@@ -77,16 +77,18 @@ header img {
 /*main*/
 main {
   grid-column: 1/-1;
-  padding: 80px 0;
+  display: flex;
+  justify-content: center;
+  margin: 60px 0 0 0;
 }
 
 .card-container {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: flex-end;
-  flex-wrap: wrap;
-  grid-template-rows: 1fr 1fr;
-  row-gap: 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "cooking chef explore"
+    "nutrition plant teen";
 }
 
 
@@ -101,10 +103,32 @@ main {
   justify-content: center;
   align-items: center;
   box-shadow: 5px 5px 20px grey;
+  margin: 48px;
 }
 
-.explore {
+.item-1 {
+  grid-area: cooking;
+}
+
+.item-2 {
+  grid-area: chef;
+}
+
+.item-3 {
   background: linear-gradient(180deg, #FF4C4C 0%, #A94E97 100%);
+  grid-area: explore;
+}
+
+.item-4 {
+  grid-area: nutrition;
+}
+
+.item-5 {
+  grid-area: plant;
+}
+
+item-6 {
+  grid-area: teen;
 }
 
 #explore-text {
@@ -159,4 +183,39 @@ footer {
   header {
     flex-direction: column;
   }
+
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "cooking chef"
+      "explore nutrition"
+      "plant teen";
+  }
+}
+
+/*mobile size*/
+@media (max-width: 480px) {
+  .card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas:
+      "explore"
+      "cooking"
+      "chef"
+      "nutrition"
+      "plant"
+      "teen";
+  }
+
+  .item-3 {
+    height: 120px;
+  }
+
+  .card-content {
+    width: auto;
+  }
+
 }

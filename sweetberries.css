@@ -56,21 +56,26 @@ header {
 }
 
 header div {
-  width: 45%;
-  margin: 24px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-header p {
-  margin: 12px;
+header p,
+header h1 {
+  width: 90%;
+
 }
 
 header img {
-  width: 55%;
+  width: auto;
   border-radius: 16px;
 }
 
 .banner-img {
-  width: 350px;
+  width: 420px;
 }
 
 
